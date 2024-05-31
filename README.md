@@ -1,3 +1,5 @@
+# Chat App - SignalR (.NET 8) + Angular 17
+
 ## Backend létrehozás ez alapján:
 
 https://learn.microsoft.com/en-us/aspnet/core/tutorials/signalr-typescript-webpack?view=aspnetcore-8.0&tabs=visual-studio-code
