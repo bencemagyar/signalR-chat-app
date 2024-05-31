@@ -14,6 +14,20 @@ Csak ezeket hajtottam végre:
 
 - A Program.cs fájlban beregisztráltam az elkészített ChatHub -ot
 
+- CORS-t be kell állítani a Program.cs-ben
+
+- Program.cs végrehajtási sorrendje (fontos!)
+  1. web application builder létrehozása
+  2. CORS hozzáadása a builder.Services-hez
+     2.1. Frontend domain-jét kell hozzáadni
+     2.2 kell: AllowAnyHeader, AllowAnyMethod, AllowCredentials
+  3. builder.Services.AddSignalR();
+  4. app létrehozása builder.Build() hívással
+  5. app.UseDefaultFiles(); és app.UseStaticFiles();
+  6. routeokhoz tartozó handlerek regisztrálása
+     6.1. app.Map\* metódusok (app.MapGet, app.MapPut, app.MapPost, app.MapHub)
+  7. App futtatása
+
 ## Frontend:
 
 - Új angular projekt
