@@ -60,3 +60,5 @@ this.connection.on(
 ```ts
 this.connection.start().then(/* ... */); //...;
 ```
+
+## .gitignore hozzáadása
