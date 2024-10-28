@@ -36,13 +36,19 @@ Csak ezeket hajtottam végre:
 
 #### app.component.ts
 
-- Elkészítem az app.component.ts -be a felületet
+- Elkészítem az app.component.ts -be a felületet ([puska](https://github.com/bencemagyar/signalR-chat-app/blob/master/ws-frontend/src/app/app.component.html))
 - elkészítettem egy connection változót, aminek beállítottam az url-t, és lebuildeltem
 
 ```ts
 connection = new signalR.HubConnectionBuilder()
   .withUrl('http://localhost:5188/hub')
   .build();
+```
+
+- ha nem importálja automatikusan a signalR-es javascript kliens lib-et, akkor így kell importálni:
+
+```ts
+import * as signalR from "@microsoft/signalr";
 ```
 
 - az ngOnInitben feliratkozom a Hub-nak a `messageReceived` eseményére, és átadok egy callbacket, ami meg fog hívódni mindig, amikor a backend elsüti ezt az eseményt.
