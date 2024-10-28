@@ -14,7 +14,7 @@ Csak ezeket hajtottam végre:
 
 - A Program.cs fájlban beregisztráltam az elkészített ChatHub -ot
 
-- CORS-t be kell állítani a Program.cs-ben
+- CORS-t be kell állítani a Program.cs-ben ([puska](https://github.com/bencemagyar/signalR-chat-app/blob/master/SignalRWebpack/Program.cs))
 
 - Program.cs végrehajtási sorrendje (fontos!)
   1. web application builder létrehozása
