@@ -11,6 +11,14 @@ Csak ezeket hajtottam végre:
 - [Configure the server](https://learn.microsoft.com/en-us/aspnet/core/tutorials/signalr-typescript-webpack?view=aspnetcore-8.0&tabs=visual-studio-code#configure-the-server) fejezet zöld részeit hozzáadtam
 
 - Hubs/ChatHub.cs -t elkészítettem a leírás alapján
+  - a NewMessage metódus első paramétere (username) ne long legyen, hanem string!
+ 
+    ```cs
+      public async Task NewMessage(string username, string message)
+      {
+          await Clients.All.SendAsync("messageReceived", username, message);
+      }
+    ```
 
 - A Program.cs fájlban beregisztráltam az elkészített ChatHub -ot
 
